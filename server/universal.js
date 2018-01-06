@@ -1,13 +1,12 @@
 const path = require('path')
 const fs = require('fs')
-
 const React = require('react')
 const {Provider} = require('react-redux')
 const {renderToString} = require('react-dom/server')
 const {StaticRouter} = require('react-router-dom')
 
-const {default: configureStore} = require('../src/store')
-const {default: App} = require('../src/containers/App')
+const {default: configureStore} = require('../src/redux/store');
+const {default: App} = require('../src/router');
 
 module.exports = function universalLoader(req, res) {
   const filePath = path.resolve(__dirname, '..', 'build', 'index.html')
@@ -35,7 +34,7 @@ module.exports = function universalLoader(req, res) {
       res.redirect(301, context.url)
     } else {
       // we're good, send the response
-      const RenderedApp = htmlData.replace('{{SSR}}', markup)
+      const RenderedApp = htmlData.replace('<br>', markup)
       res.send(RenderedApp)
     }
   })

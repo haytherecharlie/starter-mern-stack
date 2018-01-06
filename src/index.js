@@ -1,23 +1,27 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import { BrowserRouter } from 'react-router-dom'
+/* @flow */
 
-import configureStore from './store'
-import './index.css'
-import App from './containers/App'
-import registerServiceWorker from './registerServiceWorker'
+/**********************************
+  Import : node_modules
+**********************************/
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-// Let the reducers handle initial state
-const initialState = {}
-const store = configureStore(initialState)
+/**********************************
+  Import : Local Files
+**********************************/
+import configureStore from './redux/store';
+import './assets/scss/main.css';
+import Router from './router';
 
+/**********************************
+  ReactDom : Render
+**********************************/
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={configureStore()}>
     <BrowserRouter>
-      <App />
+      <Router />
     </BrowserRouter>
   </Provider>
-, document.getElementById('root')
-)
-registerServiceWorker()
+, document.getElementById('root'));
