@@ -1,18 +1,31 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import reducers from './reducers'
+/* @flow */
 
-export default function configureStore(initialState = {}) {
+/**********************************
+  Import : node_modules
+**********************************/
+import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-    // Create the store with two middlewares
-  const middlewares = [];
+/**********************************
+  Import : Reducers
+**********************************/
+import * as userReducers from './user/reducers';
 
-  const enhancers = [applyMiddleware(...middlewares)]
+/**********************************
+  Redux : Combine Reducers
+**********************************/
+const rootReducer = combineReducers({
+    user: userReducers.user
+});
 
-  const store = createStore(reducers, initialState, compose(...enhancers))
-
-  // Extensions
-  store.asyncReducers = {} // Async reducer registry
-
-  return store
-  
-}
+/**********************************
+  Redux : Configure Store
+**********************************/
+const middlewares = [];
+const enhancers = [applyMiddleware(...middlewares)];
+const initialState = {};
+export const store = createStore(
+    rootReducer, 
+    initialState, 
+    composeWithDevTools(...enhancers)
+);
