@@ -1,38 +1,49 @@
 /* @flow */
+/*******************************************
+ * 
+ * ---------------------
+ * REACT ROUTER
+/******************************************/
 
-/**********************************
-  Import : node_modules
-**********************************/
+/*******************************************
+ * NODE_MODULES
+/******************************************/
 import { createStore, applyMiddleware, combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-/**********************************
-  Import : Reducers
-**********************************/
+/*******************************************
+ * LOCAL IMPORTS
+/******************************************/
 import * as userReducers from './user/reducers';
 
-/**********************************
-  Redux : Combine Reducers
-**********************************/
+/*******************************************
+ * VARIABLES 
+/******************************************/
 const rootReducer = combineReducers({
     user: userReducers.user
 });
 
-/**********************************
-  Redux : Configure Store
-**********************************/
-export default function configureStore(initialState = {}) {
+/*******************************************
+ * CONFIGURE STORE FUNCTION
+/******************************************/
+const configureStore = (initialState = {}) => {
 
-    // Create the store with two middlewares
-  const middlewares = [];
+    // Middlewares
+    const middlewares = [];
 
-  const enhancers = [applyMiddleware(...middlewares)]
+    // Enhancers
+    const enhancers = [applyMiddleware(...middlewares)]
 
-  const store = createStore(rootReducer, initialState, composeWithDevTools(...enhancers))
+    // Create Store
+    const store = createStore(rootReducer, initialState, composeWithDevTools(...enhancers))
+    store.asyncReducers = {} // Async reducer registry
 
-  // Extensions
-  store.asyncReducers = {} // Async reducer registry
+    // Return Store
+    return store
 
-  return store
-  
 }
+
+/*******************************************
+ * EXPORT
+/******************************************/
+export default configureStore;
