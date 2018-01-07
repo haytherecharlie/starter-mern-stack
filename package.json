@@ -1,36 +1,45 @@
 {
-  "name": "CRASSR",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "react-scripts": "^1.0.17"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "compression": "^1.7.1",
-    "express": "^4.16.2",
-    "global": "^4.3.2",
-    "history": "^4.7.2",
-    "ignore-styles": "^5.0.1",
-    "morgan": "^1.9.0",
-    "nodemon": "^1.14.8",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2",
-    "redux-devtools-extension": "^2.13.2",
-    "redux-logger": "^3.0.6",
-    "redux-saga": "^0.16.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "start:server": "NODE_ENV=development nodemon server/index.js",
-    "now-start": "NODE_ENV=production nodemon server/index.js",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "name": "CRASSR",
+    "version": "1.0.0",
+    "private": true,
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "react-scripts": "^1.0.17",
+        "redux-devtools-extension": "^2.13.2"
+    },
+    "dependencies": {
+        "body-parser": "^1.18.2",
+        "compression": "^1.7.1",
+        "cssnano": "^3.10.0",
+        "express": "^4.16.2",
+        "ignore-styles": "^5.0.1",
+        "morgan": "^1.9.0",
+        "nodemon": "^1.14.8",
+        "node-sass": "^4.5.3",
+        "postcss": "^6.0.12",
+        "postcss-cli": "^4.1.1",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "react-redux": "^5.0.6",
+        "react-router-dom": "^4.2.2",
+        "redux": "^3.7.2",
+        "redux-devtools-extension": "^2.13.2",
+        "redux-logger": "^3.0.6",
+        "redux-saga": "^0.16.0"
+    },
+    "scripts": {
+        "prebuild": "node-sass src/assets/scss/main.scss src/assets/scss/main.css",
+        "build": "postcss -u autoprefixer -b 'last 2 versions' -u cssnano -o -r src/assets/scss/main.css",
+        "postbuild": "react-scripts build",
+        "flow": "flow",
+        "start": "npm-run-all -p watch-css start-js",
+        "start-js": "react-scripts start",        
+        "prestart:server": "yarn build",
+        "start:server": "NODE_ENV=development nodemon server/index.js",
+        "start:production": "NODE_ENV=production nodemon server/index.js",
+        "test": "react-scripts test --env=jsdom",
+        "prewatch-css": "node-sass src/assets/scss/main.scss src/assets/scss/main.css",
+        "watch-css": "node-sass src/assets/scss/main.scss src/assets/scss/main.css --watch"
+    }
 }

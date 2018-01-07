@@ -14,6 +14,7 @@ const express = require('express')
 /******************************************/
 const render = require('../controllers/render');
 const api = require('../controllers/api');
+const assets = require('../controllers/assets');
 
 /*******************************************
  * VARIABLES 
@@ -42,6 +43,8 @@ router.get('/api/ratings', api.ratings);
 
 // Api Error Route
 router.get('/api/**', api.error);
+
+router.get('/static/**', assets.send);
 
 // Render Route
 router.get('/**', render)

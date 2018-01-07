@@ -23,7 +23,7 @@ import React from 'react';
 class Landing extends React.PureComponent {
     render() {
         return (
-            <div className="Landing">
+            <div className="container Landing">
                 !React Application!
             </div>
         )

@@ -23,7 +23,7 @@ import * as userActions from '../../redux/user/actions';
 class NoMatch extends React.PureComponent {
     render() {
         return (
-            <div className="NoMatch">
+            <div className="container NoMatch">
                 Page Not Found.
             </div>
         )
