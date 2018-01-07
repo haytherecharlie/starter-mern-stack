@@ -37,4 +37,4 @@ console.log(path.resolve(__dirname, '../build'));
 /*******************************************
  * START SERVER
 /******************************************/
-app.listen(PORT, () => { console.log(`Hairbrain on ${PORT}!`) });
+app.listen(PORT, () => { console.log(`Server on ${PORT}!`) });
