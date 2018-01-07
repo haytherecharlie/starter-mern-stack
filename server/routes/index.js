@@ -29,21 +29,13 @@ router.use((req, res, next) => {
 /*******************************************
  * ROUTES
 /******************************************/
-// Login Route
-router.get('/api/login', api.login);
-
-// Client Route
-router.get('/api/clients', api.clients);
-
-// Profile Route
-router.get('/api/profile', api.profile);
-
-// Rating Route
-router.get('/api/ratings', api.ratings);
+// Mock Route
+router.get('/api/login', api.mock);
 
 // Api Error Route
 router.get('/api/**', api.error);
 
+// Static Assets Route
 router.get('/static/**', assets.send);
 
 // Render Route
