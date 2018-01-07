@@ -7,15 +7,27 @@ Install
 yarn install
 ```
 
-Run Development Server
+Run Client Dev Server
 ----------------------
 ```bash
-yarn build
+yarn start
+```
+
+Run Express Dev Server
+----------------------
+```bash
 yarn start:server
 ```
-Run Production Server
+
+Run Express Production Server
 ---------------------
 ```bash
-yarn start
+yarn start:production
+```
+
+Build For Production
+---------------------
+```bash
+yarn build
 ```
 
