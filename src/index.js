@@ -11,7 +11,7 @@ import { BrowserRouter } from 'react-router-dom';
 /**********************************
   Import : Local Files
 **********************************/
-import {store} from './redux/store';
+import configureStore from './redux/store';
 import './assets/scss/main.css';
 import Router from './router';
 
@@ -19,7 +19,7 @@ import Router from './router';
   ReactDom : Render
 **********************************/
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={configureStore()}>
         <BrowserRouter>
             <Router />
         </BrowserRouter>

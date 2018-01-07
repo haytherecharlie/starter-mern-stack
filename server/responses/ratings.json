@@ -1,0 +1,33 @@
+{
+    "total": 5,
+    "raw": [
+        {
+            "stars": 5,
+            "comment": "Really careful work, and a friendly atmosphere. Definitely will be back!",
+            "clientid": "59703a059595e476af6e03ef",
+            "_id": "59703a2e9595e476af6e03f1",
+            "date": "2017-07-20T05:05:50.408Z"
+        },
+        {
+            "stars": 5,
+            "comment": "He's really friendly, and a great stylist",
+            "clientid": "5988fa9f09b9dc655eb8c50b",
+            "_id": "5988fb6909b9dc655eb8c50d",
+            "date": "2017-08-07T23:44:41.383Z"
+        },
+        {
+            "stars": 5,
+            "comment": "Sounds amazing!",
+            "clientid": "5994605909b9dc655eb8c50f",
+            "_id": "599461cd09b9dc655eb8c511",
+            "date": "2017-08-16T15:16:29.424Z"
+        },
+        {
+            "stars": 5,
+            "comment": "Cool guy\r\nNice hair\r\nCould use a shower",
+            "clientid": "5a0215ec09b9dc655eb8c528",
+            "_id": "5a02161c09b9dc655eb8c52a",
+            "date": "2017-11-07T20:22:52.951Z"
+        }
+    ]
+}

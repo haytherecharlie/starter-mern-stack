@@ -21,11 +21,18 @@ const rootReducer = combineReducers({
 /**********************************
   Redux : Configure Store
 **********************************/
-const middlewares = [];
-const enhancers = [applyMiddleware(...middlewares)];
-const initialState = {};
-export const store = createStore(
-    rootReducer, 
-    initialState, 
-    composeWithDevTools(...enhancers)
-);
+export default function configureStore(initialState = {}) {
+
+    // Create the store with two middlewares
+  const middlewares = [];
+
+  const enhancers = [applyMiddleware(...middlewares)]
+
+  const store = createStore(rootReducer, initialState, composeWithDevTools(...enhancers))
+
+  // Extensions
+  store.asyncReducers = {} // Async reducer registry
+
+  return store
+  
+}
