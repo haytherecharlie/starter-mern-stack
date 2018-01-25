@@ -1,0 +1,16 @@
+{    
+    "arts": "01",
+    "books": "02",
+    "comedy": "03",
+    "docs": "04",
+    "home": "05",
+    "junos": "06",
+    "kids": "07",
+    "life": "08",
+    "music": "09",
+    "news": "10",
+    "parents": "11",
+    "radio": "12",
+    "sports": "13",
+    "television": "14"
+}

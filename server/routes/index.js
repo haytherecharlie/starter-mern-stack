@@ -7,13 +7,13 @@
 /*******************************************
  * NODE_MODULES
 /******************************************/
-const express = require('express')
+const express = require('express');
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
 const render = require('../controllers/render');
-const api = require('../controllers/api');
+const story = require('../controllers/story');
 const assets = require('../controllers/assets');
 
 /*******************************************
@@ -29,11 +29,8 @@ router.use((req, res, next) => {
 /*******************************************
  * ROUTES
 /******************************************/
-// Mock Route
-router.get('/api/login', api.mock);
-
-// Api Error Route
-router.get('/api/**', api.error);
+// Routes = /api/1.2345
+router.get(/\/api\/[+-]?([0-9]*[.])?[0-9]+$/, story);
 
 // Static Assets Route
 router.get('/static/**', assets.send);

@@ -7,22 +7,16 @@ Install
 yarn install
 ```
 
-Run Client Dev Server
+Run React Client Dev Server
 ----------------------
 ```bash
 yarn start
 ```
 
-Run Express Dev Server
+Run Express Server w/ SSR
 ----------------------
 ```bash
-yarn start:server
-```
-
-Run Express Production Server
----------------------
-```bash
-yarn start:production
+yarn serve
 ```
 
 Build For Production
