@@ -1,7 +1,7 @@
 /*******************************************
  * 
  * ---------------------
- * API CONTROLLER
+ * LANDING CONTROLLER
 /******************************************/
 
 /*******************************************
@@ -19,20 +19,17 @@ const categories = require('../../constants/categories');
 /******************************************/
 module.exports = (req, res) => {
 
-    // The parsed request URL.
-    const urlements = url.parse(req.url);
+    // The array of path elements. 
+    const path = url.parse(req.url).pathname.split('/');
 
-    // The path array. 
-    const pathArray = urlements.pathname.split('/');
+    // The category.
+    const category = path[path.length - 1];
 
-    // The category. 
-    const category = pathArray[pathArray.length -1];
+    // The subCategory.
+    let subCategory = req.query.s;
 
     // If the category is valid. 
     if(category in categories) {
-
-        // The subCategory variable.
-        const subCategory = urlements.query;
 
         // If subCategory is valid.
         if(subCategory in categories[category].subCategories) {
@@ -41,6 +38,7 @@ module.exports = (req, res) => {
             res.status(200).json({
                 category, 
                 subCategory,
+                categoryId: categories[category].subCategories[subCategory].categoryId,
                 lineupId: categories[category].subCategories[subCategory].lineupId,
                 source: categories[category].subCategories[subCategory].source
             })
@@ -50,10 +48,14 @@ module.exports = (req, res) => {
         // The subCategory is not valid.
         else {
 
+            // The subCategory is none.
+            subCategory = "none";
+
             // Send response for category only. 
             res.status(200).json({
                 category, 
-                subCategory: "none",
+                subCategory,
+                categoryId: categories[category].categoryId,
                 lineupId: categories[category].lineupId,
                 source: categories[category].source                
             });
@@ -66,7 +68,7 @@ module.exports = (req, res) => {
     else {
 
         // Send 404 and error message. 
-        res.send(404).json("Invalid Category");
+        res.status(404).json("Invalid Category");
 
     }
 

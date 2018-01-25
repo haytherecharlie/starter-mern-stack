@@ -32,7 +32,7 @@ const render = (req, res) => {
     fs.readFile(filePath, 'utf8', (err, htmlData) => {
 
         // If error, send 404.
-        if (err) return res.status(404).end('Error Reading HTML');
+        if (err) return res.status(404).end('Invalid API Endpoint');
 
         // Constants.
         const context = {}

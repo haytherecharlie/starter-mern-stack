@@ -1,7 +1,7 @@
 /*******************************************
  * 
  * ---------------------
- * API CONTROLLER
+ * STORY CONTROLLER
 /******************************************/
 
 /*******************************************
@@ -29,30 +29,61 @@ module.exports = (req, res) => {
     const articleId = pathArray[pathArray.length -1];
 
     // The category. 
-    let category = urlements.query;
+    let category = req.query.c;
+    
+    // The subCategory variable.
+    let subCategory = req.query.s;
 
     // If the category is valid.
     if(category in categories) {
 
-        // Send 200 with articleId and category. 
-        res.status(200).json({
-            articleId, 
-            category,
-            lineupId: categories[category].lineupId,
-            source: categories[category].source
-        });
+        // If subCategory is valid.
+        if(subCategory in categories[category].subCategories) {
+
+            // Send 200 with articleId and category. 
+            res.status(200).json({
+                articleId, 
+                category,
+                subCategory,
+                categoryId: categories[category].subCategories[subCategory].categoryId,
+                lineupId: categories[category].subCategories[subCategory].lineupId,
+                source: categories[category].subCategories[subCategory].source
+            });
+        }
+
+        // If subCategory is not valid.
+        else {
+
+            subCategory = "none";
+
+            // Send 200 with articleId and category = "home".
+            res.status(200).json({
+                articleId, 
+                category,
+                subCategory,
+                categoryId: categories[category].categoryId,            
+                lineupId: categories[category].lineupId,
+                source: categories[category].source
+            });
+        }
 
     }
 
     // Category is not valid. 
     else {
 
+        // Set category to Home.
         category = "home";
+
+        // Set subCategory to None.
+        subCategory = "none";
 
         // Send 200 with articleId and category = "home".
         res.status(200).json({
             articleId, 
             category,
+            subCategory,
+            categoryId: categories[category].categoryId,            
             lineupId: categories[category].lineupId,
             source: categories[category].source
         });

@@ -30,11 +30,12 @@ router.use((req, res, next) => {
 /*******************************************
  * ROUTES
 /******************************************/
+
 // Story Routes
-router.get(/\/api\/[+-]?([0-9]*[.])?[0-9]+$/, story);
+router.get(/\/api\/story\/[+-]?([0-9]*[.])?[0-9]+$/, story);
 
 // Landing Routes
-router.get('/api/**', landing);
+router.get('/api/landing/**', landing);
 
 // Static Assets Route
 router.get('/static/**', assets.send);
