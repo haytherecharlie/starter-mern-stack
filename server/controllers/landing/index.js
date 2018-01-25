@@ -25,11 +25,48 @@ module.exports = (req, res) => {
     // The path array. 
     const pathArray = urlements.pathname.split('/');
 
-    // The article ID. 
-    const articleId = pathArray[pathArray.length -1];
+    // The category. 
+    const category = pathArray[pathArray.length -1];
 
-    // The section. 
-    const section = urlements.query;
-    
+    // If the category is valid. 
+    if(category in categories) {
+
+        // The subCategory variable.
+        const subCategory = urlements.query;
+
+        // If subCategory is valid.
+        if(subCategory in categories[category].subCategories) {
+
+            // Send Response for category and subCategory. 
+            res.status(200).json({
+                category, 
+                subCategory,
+                source: categories[category].subCategories[subCategory].source
+            })
+
+        }
+
+        // The subCategory is not valid.
+        else {
+
+            // Send response for category only. 
+            res.status(200).json({
+                category, 
+                subCategory: "none",
+                source: categories[category].source
+            });
+
+        }
+
+    }
+
+    // The category is not valid.
+    else {
+
+        // Send 404 and error message. 
+        res.send(404).json("Invalid Category");
+
+    }
+
 }
 

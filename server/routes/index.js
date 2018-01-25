@@ -14,6 +14,7 @@ const express = require('express');
 /******************************************/
 const render = require('../controllers/render');
 const story = require('../controllers/story');
+const landing = require('../controllers/landing');
 const assets = require('../controllers/assets');
 
 /*******************************************
@@ -29,8 +30,11 @@ router.use((req, res, next) => {
 /*******************************************
  * ROUTES
 /******************************************/
-// Routes = /api/1.2345
+// Story Routes
 router.get(/\/api\/[+-]?([0-9]*[.])?[0-9]+$/, story);
+
+// Landing Routes
+router.get('/api/**', landing);
 
 // Static Assets Route
 router.get('/static/**', assets.send);

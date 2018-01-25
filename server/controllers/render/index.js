@@ -17,8 +17,8 @@ const { StaticRouter } = require('react-router-dom');
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-const { default: configureStore } = require('../../src/redux/store');
-const { default: App } = require('../../src/router');
+const { default: configureStore } = require('../../../src/redux/store');
+const { default: App } = require('../../../src/router');
 
 /*******************************************
  * RENDER FUNCTION
@@ -26,7 +26,7 @@ const { default: App } = require('../../src/router');
 const render = (req, res) => {
 
     // Path to index.html
-    const filePath = path.resolve(__dirname, '../../build/index.html');
+    const filePath = path.resolve(__dirname, '../../../build/index.html');
 
     // Read index.html
     fs.readFile(filePath, 'utf8', (err, htmlData) => {

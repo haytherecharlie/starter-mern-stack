@@ -1,16 +1,77 @@
 {    
-    "arts": "01",
-    "books": "02",
-    "comedy": "03",
-    "docs": "04",
-    "home": "05",
-    "junos": "06",
-    "kids": "07",
-    "life": "08",
-    "music": "09",
-    "news": "10",
-    "parents": "11",
-    "radio": "12",
-    "sports": "13",
-    "television": "14"
+    "arts": {
+        "lineupId": "01",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "books": { 
+        "lineupId": "02",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "comedy": { 
+        "lineupId": "03",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "docs": { 
+        "lineupId": "04",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "home": { 
+        "lineupId": "05",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "junos": { 
+        "lineupId": "06",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "klineupIds": { 
+        "lineupId": "07",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "life": { 
+        "lineupId": "08",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "music": { 
+        "lineupId": "09",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "news": { 
+        "lineupId": "10",
+        "source": "polopoly",
+        "subCategories": {
+            "toronto": {
+                "lineupId": "100",
+                "source": "polopoly"
+            }
+        }
+    },
+    "parents": { 
+        "lineupId": "11",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "radio": { 
+        "lineupId": "02",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "sports": { 
+        "lineupId": "12",
+        "source": "polopoly",
+        "subCategories": {}
+    },
+    "television": { 
+        "lineupId": "13",
+        "source": "polopoly",
+        "subCategories": {}
+    }
 }

@@ -29,21 +29,31 @@ module.exports = (req, res) => {
     const articleId = pathArray[pathArray.length -1];
 
     // The category. 
-    const category = urlements.query;
+    let category = urlements.query;
 
     // If the category is valid.
     if(category in categories) {
 
         // Send 200 with articleId and category. 
-        res.status(200).json({articleId, category});
+        res.status(200).json({
+            articleId, 
+            category,
+            source: categories[category].source
+        });
 
     }
 
     // Category is not valid. 
     else {
 
+        category = "home";
+
         // Send 200 with articleId and category = "home".
-        res.status(200).json({articleId, category: "home"});
+        res.status(200).json({
+            articleId, 
+            category,
+            source: categories[category].source
+        });
 
     }
     
