@@ -41,6 +41,7 @@ module.exports = (req, res) => {
             res.status(200).json({
                 category, 
                 subCategory,
+                lineupId: categories[category].subCategories[subCategory].lineupId,
                 source: categories[category].subCategories[subCategory].source
             })
 
@@ -53,7 +54,8 @@ module.exports = (req, res) => {
             res.status(200).json({
                 category, 
                 subCategory: "none",
-                source: categories[category].source
+                lineupId: categories[category].lineupId,
+                source: categories[category].source                
             });
 
         }
