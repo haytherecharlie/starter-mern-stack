@@ -1,8 +1,8 @@
 /* @flow */
 /*******************************************
- * 
+ *
  * ---------------------
- * REACT APPLICATION
+ * React Application
 /******************************************/
 
 /*******************************************
@@ -10,23 +10,33 @@
 /******************************************/
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { injectGlobal } from 'styled-components';
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-import configureStore from './redux/store';
-import './assets/scss/main.css';
-import Router from './router';
+import Routes from './routes';
+import { reboot } from './assets/styles/reboot';
+import { fonts } from './assets/styles/fonts';
+import { base } from './assets/styles/base';
+import { variables } from './assets/styles/variables';
+
+/*******************************************
+ * STYLED COMPONENTS
+/******************************************/
+injectGlobal`
+    ${reboot}
+    ${fonts}
+    ${base}
+    ${variables}
+`;
 
 /*******************************************
  * RENDER FUNCTION
 /******************************************/
 ReactDOM.render(
-    <Provider store={configureStore()}>
-        <BrowserRouter>
-            <Router />
-        </BrowserRouter>
-    </Provider>, 
+    <BrowserRouter>
+        <Routes/>
+    </BrowserRouter>,
 document.getElementById('root'));

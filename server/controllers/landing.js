@@ -1,23 +1,24 @@
 /*******************************************
- * 
+ *
  * ---------------------
- * MAIN SASS FILE
+ * LANDING CONTROLLER
 /******************************************/
 
 /*******************************************
- * BASE STYLES
+ * NODE_MODULES
 /******************************************/
-@import './base/reboot.scss';
-@import './base/variables.scss';
-@import './base/fonts.scss';
-@import './base/base.scss';
+const url = require('url');
 
 /*******************************************
- * CONTAINER STYLES
+ * LOCAL IMPORTS
 /******************************************/
-@import '../../containers/Landing/style.scss';
-@import '../../containers/NoMatch/style.scss';
 
 /*******************************************
- * COMPONENT STYLES
+ * STORY RESPONSE
 /******************************************/
+module.exports = (req, res) => {
+
+    return res.send('API TEST');
+
+}
+

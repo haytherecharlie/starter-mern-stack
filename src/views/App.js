@@ -1,37 +1,33 @@
 /* @flow */
 /*******************************************
- * 
+ * © 2018 Charlie Hay
  * ---------------------
- * REACT ROUTER
+ * Landing
 /******************************************/
 
 /*******************************************
  * NODE_MODULES
 /******************************************/
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-import Landing from '../containers/Landing';
-import NoMatch from '../containers/NoMatch';
+const View = styled.div`
+    height: 100%;
+    width: 100%;
+`;
 
 /*******************************************
  * REACT COMPONENT
 /******************************************/
-class Router extends React.Component {
+export default class Landing extends React.PureComponent {
     render() {
         return (
-            <Switch>
-                <Route exact path="/" component={Landing} />
-                <Route path="*" component={NoMatch} />
-            </Switch>
+            <View>
+                Landing
+            </View>
         )
     }
 }
-
-/*******************************************
- * EXPORT
-/******************************************/
-export default Router;
