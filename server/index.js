@@ -7,7 +7,6 @@
 /*******************************************
  * NODE_MODULES
 /******************************************/
-require('ignore-styles');
 require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['env', 'react-app'] });
 const bodyParser = require('body-parser');
 const compression = require('compression');
