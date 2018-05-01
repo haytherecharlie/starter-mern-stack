@@ -1,45 +1,30 @@
 /*******************************************
- *
+ * © 2018 Charlie Hay
  * ---------------------
- * EXPRESS SERVER
+ * ROUTES
 /******************************************/
 
 /*******************************************
  * NODE_MODULES
 /******************************************/
-const express = require('express');
+import Express from 'express';
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-const render = require('../controllers/render');
-const landing = require('../controllers/landing');
-const assets = require('../controllers/assets');
+import Landing from '../controllers/Landing';
 
 /*******************************************
- * VARIABLES
+ * CONSTANTS
 /******************************************/
-const router = express.Router()
-router.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "*")
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-    next()
-})
+const routes = Express.Router()
 
 /*******************************************
  * ROUTES
 /******************************************/
-
-// Landing Routes
-router.get('/api/**', landing);
-
-// Static Assets Route
-router.get('/static/**', assets);
-
-// Render Route
-router.get('/**', render)
+routes.get('/**', Landing);
 
 /*******************************************
  * VARIABLES
 /******************************************/
-module.exports = router
+export default routes;

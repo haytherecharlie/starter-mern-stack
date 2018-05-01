@@ -2,7 +2,7 @@
 /*******************************************
  * © 2018 Charlie Hay
  * ---------------------
- * Routes
+ * REACT ROUTER
 /******************************************/
 
 /*******************************************
@@ -14,7 +14,7 @@ import { Switch, Route } from 'react-router-dom';
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-import Login from '../views/Login';
+import Home from '../views/Home';
 import NotFound from '../views/NotFound';
 
 /*******************************************
@@ -24,7 +24,7 @@ export default class Routes extends React.PureComponent {
     render() {
         return (
             <Switch>
-                <Route exact path="/" component={Login} />
+                <Route exact path="/" component={Home} />
                 <Route path="*" component={NotFound} />
             </Switch>
         )

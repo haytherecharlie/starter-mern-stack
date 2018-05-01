@@ -1,8 +1,8 @@
 /* @flow */
 /*******************************************
- *
+ * © 2018 Charlie Hay
  * ---------------------
- * React Application
+ * REACT APPLICATION
 /******************************************/
 
 /*******************************************
@@ -20,23 +20,17 @@ import Routes from './routes';
 import { reboot } from './assets/styles/reboot';
 import { fonts } from './assets/styles/fonts';
 import { base } from './assets/styles/base';
-import { variables } from './assets/styles/variables';
 
 /*******************************************
  * STYLED COMPONENTS
 /******************************************/
-injectGlobal`
-    ${reboot}
-    ${fonts}
-    ${base}
-    ${variables}
-`;
+injectGlobal`${reboot} ${fonts} ${base}`;
 
 /*******************************************
  * RENDER FUNCTION
 /******************************************/
 ReactDOM.render(
     <BrowserRouter>
-        <Routes/>
+        <Routes />
     </BrowserRouter>,
 document.getElementById('root'));

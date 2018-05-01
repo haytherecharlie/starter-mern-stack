@@ -1,5 +1,5 @@
 /*******************************************
- *
+ * © 2018 Charlie Hay
  * ---------------------
  * EXPRESS SERVER
 /******************************************/
@@ -7,33 +7,30 @@
 /*******************************************
  * NODE_MODULES
 /******************************************/
-require('babel-register')({ ignore: /\/(build|node_modules)\//, presets: ['env', 'react-app'] });
-const bodyParser = require('body-parser');
-const compression = require('compression');
-const express = require('express');
-const morgan = require('morgan');
-const path = require('path');
-const fs = require('fs');
+import Express from 'express';
+import BodyParser from 'body-parser';
+import Morgan from 'morgan';
 
 /*******************************************
- * VARIABLES
+ * LOCAL IMPORTS
 /******************************************/
+import Routes from './routes';
+
+/*******************************************
+ * CONSTANTS
+/******************************************/
+const App = Express();
 const PORT = process.env.PORT || 3001;
-const index = require('./routes');
-const app = express();
 
 /*******************************************
  * APP CONFIGURATION
 /******************************************/
-app.use(compression());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(morgan('combined'));
-app.use('/', index);
-app.use(express.static(path.resolve(__dirname, '../build')));
-console.log(path.resolve(__dirname, '../build'));
+App.use(BodyParser.urlencoded({ extended: false }));
+App.use(BodyParser.json({ limit: '25mb' }));
+App.use(Morgan('combined'));
+App.use(Routes);
 
 /*******************************************
  * START SERVER
 /******************************************/
-app.listen(PORT, () => { console.log(`Server on ${PORT}!`) });
+App.listen(PORT, () => console.log(`Server on ${PORT}!`));

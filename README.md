@@ -1,4 +1,4 @@
-Create-React-App & Server Side Rendering
+Create-React-App w/ Node/Express Server
 ===========================================
 
 Install
@@ -13,7 +13,7 @@ Run React Client Dev Server
 yarn start
 ```
 
-Run Express Server w/ SSR
+Run Express Server
 ----------------------
 ```bash
 yarn serve

@@ -2,7 +2,7 @@
 /*******************************************
  * © 2018 Charlie Hay
  * ---------------------
- * Login
+ * HOME VIEW
 /******************************************/
 
 /*******************************************
@@ -26,11 +26,11 @@ const View = styled.div`
 /*******************************************
  * REACT COMPONENT
 /******************************************/
-export default class Login extends React.Component {
+export default class Home extends React.Component {
     render() {
         return (
             <View>
-                <span className="regular container">Login Page</span>
+                <span className="regular container">Home Page</span>
             </View>
         )
     }
