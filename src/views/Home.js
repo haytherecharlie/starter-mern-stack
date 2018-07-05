@@ -10,13 +10,14 @@
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
 const View = styled.div`
     height: 100vh;
-    width: 100%;
+	width: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
@@ -27,11 +28,11 @@ const View = styled.div`
  * REACT COMPONENT
 /******************************************/
 export default class Home extends React.Component {
-    render() {
-        return (
-            <View>
-                <span className="regular container">Home Page</span>
-            </View>
-        )
-    }
+	render() {
+		return (
+			<View>
+				<Link to="/wow">Home Page</Link>
+			</View>
+		)
+	}
 }

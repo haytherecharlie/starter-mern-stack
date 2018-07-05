@@ -7,30 +7,30 @@
 /*******************************************
  * NODE_MODULES
 /******************************************/
-import Express from 'express';
-import BodyParser from 'body-parser';
-import Morgan from 'morgan';
+import express from 'express';
+import bodyParser from 'body-parser';
+import morgan from 'morgan';
+import path from 'path';
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-import Routes from './routes';
+import routes from './routes';
 
 /*******************************************
  * CONSTANTS
 /******************************************/
-const App = Express();
+const app = express();
 const PORT = process.env.PORT || 3001;
 
 /*******************************************
  * APP CONFIGURATION
 /******************************************/
-App.use(BodyParser.urlencoded({ extended: false }));
-App.use(BodyParser.json({ limit: '25mb' }));
-App.use(Morgan('combined'));
-App.use(Routes);
+app.use(bodyParser.json({ limit: '25mb' }));
+app.use(morgan('combined'));
+app.use(routes);
 
 /*******************************************
  * START SERVER
 /******************************************/
-App.listen(PORT, () => console.log(`Server on ${PORT}!`));
+app.listen(PORT, () => console.log(`Server on ${PORT}!`));

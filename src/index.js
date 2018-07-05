@@ -9,7 +9,7 @@
  * NODE_MODULES
 /******************************************/
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate } from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
 
@@ -29,8 +29,8 @@ injectGlobal`${reboot} ${fonts} ${base}`;
 /*******************************************
  * RENDER FUNCTION
 /******************************************/
-ReactDOM.render(
-    <BrowserRouter>
-        <Routes />
-    </BrowserRouter>,
+hydrate(
+	<BrowserRouter>
+		<Routes />
+	</BrowserRouter>,
 document.getElementById('root'));

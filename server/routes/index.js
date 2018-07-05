@@ -12,7 +12,9 @@ import Express from 'express';
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-import Landing from '../controllers/Landing';
+import api from '../controllers/api';
+import staticFiles from '../controllers/static';
+import render from '../controllers/render';
 
 /*******************************************
  * CONSTANTS
@@ -22,7 +24,15 @@ const routes = Express.Router()
 /*******************************************
  * ROUTES
 /******************************************/
-routes.get('/**', Landing);
+
+// API Endpoints.
+routes.get('/api/**', api);
+
+// Static Assets.
+routes.get('/static/**', staticFiles);
+
+// Render React.
+routes.get('/**', render);
 
 /*******************************************
  * VARIABLES

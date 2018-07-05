@@ -10,6 +10,7 @@
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 /*******************************************
  * LOCAL IMPORTS
@@ -26,12 +27,12 @@ const View = styled.div`
 /*******************************************
  * REACT COMPONENT
 /******************************************/
-export default class NotFound extends React.PureComponent {
-    render() {
-        return (
-            <View>
-                <span className="regular container">Page Not Found</span>
+export default class NotFound extends React.Component {
+	render() {
+		return (
+			<View>
+				<Link to="/">Page Not Found</Link>
             </View>
-        )
-    }
+		)
+	}
 }
