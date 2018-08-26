@@ -1,36 +1,48 @@
 /* @flow */
 /*******************************************
- * © 2018 Charlie Hay
+ * © 2018 CBC
  * ---------------------
- * REACT APPLICATION
+ * React Application
 /******************************************/
 
 /*******************************************
  * NODE_MODULES
 /******************************************/
 import React from 'react';
-import { hydrate } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
 
 /*******************************************
  * LOCAL IMPORTS
 /******************************************/
-import Routes from './routes';
-import { reboot } from './assets/styles/reboot';
-import { fonts } from './assets/styles/fonts';
-import { base } from './assets/styles/base';
+import App from './components/pages/App';
+import Home from './components/pages/Home';
+import NotFound from './components/pages/NotFound';
+import { store } from './lib/helpers/Redux';
 
 /*******************************************
  * STYLED COMPONENTS
 /******************************************/
-injectGlobal`${reboot} ${fonts} ${base}`;
+import reboot from './assets/styles/reboot';
+import fonts from './assets/styles/fonts';
+import base from './assets/styles/base';
+injectGlobal`${reboot}${fonts}${base}`;
 
 /*******************************************
  * RENDER FUNCTION
 /******************************************/
-hydrate(
-	<BrowserRouter>
-		<Routes />
-	</BrowserRouter>,
-document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store}>
+        <App>
+            <BrowserRouter>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route path="/wow" component={NotFound} />
+                    <Route path="*" component={NotFound} />
+                </Switch>
+            </BrowserRouter>
+        </App>
+    </Provider>
+, document.getElementById('root'));
