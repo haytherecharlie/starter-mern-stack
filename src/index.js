@@ -2,11 +2,11 @@
  * © 2018 Charlie Hay
  * ---------------------
  * React Application
-/******************************************/
+ ******************************************/
 
 /*******************************************
  * Node Modules
-/******************************************/
+ ******************************************/
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
@@ -15,23 +15,21 @@ import { injectGlobal } from 'styled-components';
 
 /*******************************************
  * Local Imports
-/******************************************/
+ ******************************************/
 import App from './components/pages/App';
 import Home from './components/pages/Home';
 import NotFound from './components/pages/NotFound';
 import { store } from './lib/helpers/Redux';
+import { reboot, fonts, base } from './assets/styles/base';
 
 /*******************************************
  * Styled Components
-/******************************************/
-import reboot from './assets/styles/reboot';
-import fonts from './assets/styles/fonts';
-import base from './assets/styles/base';
+ ******************************************/
 injectGlobal`${reboot}${fonts}${base}`;
 
 /*******************************************
- * Render To DOM
-/******************************************/
+ * Render App To DOM
+ ******************************************/
 ReactDOM.render(
     <Provider store={store}>
         <App>

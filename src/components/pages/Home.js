@@ -14,7 +14,6 @@ import styled from 'styled-components';
 /*******************************************
  * Local Imports
 /******************************************/
-import Loading from '../atoms/Loading'
 
 /*******************************************
  * Styled Components
@@ -31,8 +30,7 @@ class Home extends React.Component {
 
     render() {
         return (
-            <Wrapper>
-            </Wrapper>
+            <Wrapper/>
         )
     }
 }

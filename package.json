@@ -1,23 +1,36 @@
 {
-  "name": "session-react",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "cookies-js": "^1.2.3",
-    "query-string": "^6.1.0",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "react-redux": "^5.0.7",
-    "react-router-dom": "^4.3.1",
-    "react-scripts": "^1.1.5",
-    "redux": "^4.0.0",
-    "redux-devtools-extension": "^2.13.5",
-    "request": "^2.87.0",
-    "styled-components": "^3.3.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom"
-  }
+    "name": "session-react",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "dotenv": "^6.0.0",
+        "express": "^4.16.3",
+        "nodemon": "^1.18.4",
+        "react": "^16.4.1",
+        "react-dom": "^16.4.1",
+        "react-redux": "^5.0.7",
+        "react-router-dom": "^4.3.1",
+        "react-scripts": "^1.1.5",
+        "redux": "^4.0.0",
+        "redux-devtools-extension": "^2.13.5",
+        "styled-components": "^3.3.3"
+    },
+    "scripts": {
+        "build": "npm run build:client && npm run build:server",
+        "build:client": "react-scripts build",
+        "build:server": "babel -d ./build ./server -s",
+        "prod": "nodemon build/index.js",
+        "start": "react-scripts start",
+        "serve": "nodemon --exec babel-node server/index.js",
+        "test": "react-scripts test --env=jsdom"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-preset-stage-0": "^6.24.1",
+        "enzyme": "^3.6.0",
+        "enzyme-adapter-react-16": "^1.5.0",
+        "react-test-renderer": "^16.5.0"
+    }
 }
