@@ -1,25 +1,25 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * NotFound
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 import { withRouter } from 'react-router-dom';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import notFound from '../../assets/images/notFound.png';
 import Image from '../atoms/Image';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Wrapper = styled.div`
     height: 100vh;
@@ -32,7 +32,7 @@ const Wrapper = styled.div`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class NotFound extends React.Component {
 

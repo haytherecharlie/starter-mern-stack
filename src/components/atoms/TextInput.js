@@ -1,22 +1,22 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * TextInput
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Input = styled.input`
 	width: 100%;
@@ -31,7 +31,7 @@ const Input = styled.input`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class TextInput extends React.PureComponent {
     render() {

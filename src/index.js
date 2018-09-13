@@ -1,12 +1,11 @@
-/* @flow */
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * React Application
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -15,7 +14,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { injectGlobal } from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import App from './components/pages/App';
 import Home from './components/pages/Home';
@@ -23,7 +22,7 @@ import NotFound from './components/pages/NotFound';
 import { store } from './lib/helpers/Redux';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 import reboot from './assets/styles/reboot';
 import fonts from './assets/styles/fonts';
@@ -31,7 +30,7 @@ import base from './assets/styles/base';
 injectGlobal`${reboot}${fonts}${base}`;
 
 /*******************************************
- * RENDER FUNCTION
+ * Render To DOM
 /******************************************/
 ReactDOM.render(
     <Provider store={store}>
@@ -39,7 +38,6 @@ ReactDOM.render(
             <BrowserRouter>
                 <Switch>
                     <Route exact path="/" component={Home} />
-                    <Route path="/wow" component={NotFound} />
                     <Route path="*" component={NotFound} />
                 </Switch>
             </BrowserRouter>

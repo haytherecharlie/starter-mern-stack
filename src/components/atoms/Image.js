@@ -1,22 +1,22 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * Image
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Img = styled.img`
 	width: ${props => props.width};
@@ -27,7 +27,7 @@ const Img = styled.img`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class Image extends React.PureComponent {
 	render() {

@@ -1,22 +1,22 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * ImageButton
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Button = styled.button`
 	width: 30px;
@@ -30,7 +30,7 @@ const Button = styled.button`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class ImageButton extends React.PureComponent {
 	render() {

@@ -1,23 +1,23 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * Loading
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import loading from '../../assets/images/loading.gif';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Wrapper = styled.div`
 	width: 100%;
@@ -33,7 +33,7 @@ const Spinner = styled.img`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class Loading extends React.PureComponent {
 	render() {

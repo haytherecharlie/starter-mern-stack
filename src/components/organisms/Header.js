@@ -1,24 +1,24 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * Header
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import MenuIcon from '../atoms/MenuIcon';
 import Logo from '../atoms/Logo';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Wrapper = styled.div`
 	height: 62px;
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class Header extends React.Component {
 

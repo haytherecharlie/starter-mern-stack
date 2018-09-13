@@ -1,12 +1,12 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * Redux Store
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';

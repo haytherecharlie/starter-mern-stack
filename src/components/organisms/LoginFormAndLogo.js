@@ -1,18 +1,18 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * LoginFormAndLogo
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import SessionLogo from '../../assets/images/logo.png';
 import Image from '../atoms/Image';
@@ -20,7 +20,7 @@ import LoginForm from '../molecules/LoginForm';
 import Span from '../atoms/Span';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Wrapper = styled.div`
     height: 100vh;
@@ -37,7 +37,7 @@ const Wrapper = styled.div`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class LoginFormAndLogo extends React.PureComponent {
 	render() {

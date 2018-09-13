@@ -1,12 +1,12 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * LoginForm
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
@@ -14,7 +14,7 @@ import { withRouter } from 'react-router-dom';
 import cookies from 'cookies-js';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import Span from '../atoms/Span';
 import TextInput from '../atoms/TextInput';
@@ -22,7 +22,7 @@ import SubmitButton from '../atoms/SubmitButton';
 import fetchLogin from '../../lib/helpers/FetchLogin';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Wrapper = styled.div`
 	width: 100%;
@@ -38,7 +38,7 @@ const Wrapper = styled.div`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class LoginForm extends React.Component {
 

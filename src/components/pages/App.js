@@ -1,25 +1,24 @@
-/* @flow */
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * Dashboard
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import Header from '../organisms/Header';
 import Sidebar from '../organisms/Sidebar';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const AppWrapper = styled.div`
 	height: 100vh;
@@ -61,7 +60,7 @@ const PageWrapper = styled.div`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class App extends React.Component {
     render() {
@@ -84,7 +83,7 @@ class App extends React.Component {
 }
 
 /*******************************************
- * MAP STATE TO PROPS
+ * Map State To Props
 /******************************************/
 const mapState = (state) => ({
     sidebar: state.sidebar,
@@ -93,8 +92,6 @@ const mapState = (state) => ({
 /*******************************************
  * Map Dispatch To Props
 /******************************************/
-const mapDispatch = {
-
-}
+const mapDispatch = {}
 
 export default connect(mapState, mapDispatch)(App);

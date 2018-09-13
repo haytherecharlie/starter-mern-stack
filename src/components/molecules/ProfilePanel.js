@@ -1,12 +1,12 @@
-/* @flow */
+
 /*******************************************
- * © 2018 CBC
+ * © 2018 Charlie Hay
  * ---------------------
  * Profile Panel
 /******************************************/
 
 /*******************************************
- * NODE_MODULES
+ * Node Modules
 /******************************************/
 import React from 'react';
 import styled from 'styled-components';
@@ -15,7 +15,7 @@ import { connect } from 'react-redux';
 import cookies from 'cookies-js';
 
 /*******************************************
- * LOCAL IMPORTS
+ * Local Imports
 /******************************************/
 import { setUser } from '../../lib/helpers/Redux';
 import Button from '../atoms/ImageButton';
@@ -23,7 +23,7 @@ import user from '../../assets/images/user.png';
 import PanelButton from '../atoms/PanelButton';
 
 /*******************************************
- * STYLED COMPONENTS
+ * Styled Components
 /******************************************/
 const Wrapper = styled.div`
 	position: relative
@@ -82,7 +82,7 @@ const SettingsPanel = styled.div`
 `;
 
 /*******************************************
- * REACT COMPONENT
+ * React Component
 /******************************************/
 class ProfilePanel extends React.Component {
 
