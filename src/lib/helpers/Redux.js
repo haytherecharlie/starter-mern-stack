@@ -15,15 +15,18 @@ import { composeWithDevTools } from 'redux-devtools-extension';
  * INITIAL STATE
 /******************************************/
 const initialState = {
-	sidebar: "closed",
 }
+
+/*******************************************
+ * ACTION TYPES
+/******************************************/
+const ACTION = 'ACTION'
 
 /*******************************************
  * ACTIONS
 /******************************************/
-export const toggleSidebar = status => ({
-	type: 'TOGGLE_SIDEBAR',
-	status
+export const action = status => ({
+	type: ACTION,
 })
 
 /*******************************************
@@ -31,8 +34,8 @@ export const toggleSidebar = status => ({
 /******************************************/
 export const reducers = (state = initialState, action) => {
 	switch (action.type) {
-		case 'TOGGLE_SIDEBAR':
-			return { ...state, sidebar: action.status }
+		case ACTION:
+			return { ...state }
 		default:
 			return state;
 	}
@@ -41,4 +44,6 @@ export const reducers = (state = initialState, action) => {
 /*******************************************
  * EXPORT STORE
 /******************************************/
-export const store = ((initialState) => createStore(reducers, initialState, composeWithDevTools()))();
+export const store = (initialState =>
+    createStore(reducers, initialState, composeWithDevTools())
+)();
