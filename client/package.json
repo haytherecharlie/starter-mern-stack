@@ -1,0 +1,73 @@
+{
+  "name": "quickmern",
+  "version": "1.0.0",
+  "description": "Quick way to start a project",
+  "main": "index.js",
+  "author": "Charlie Hay",
+  "license": "UNLICENCED",
+  "homepage": "https://github.com/haytherecharlie/quickmern",
+  "scripts": {
+    "build": "react-scripts build",
+    "coverage": "yarn test -- --coverage",
+    "dev": "react-scripts start",
+    "lint": "eslint ./src",
+    "prod": "node build/index.js",
+    "test": "react-scripts test --env=jsdom",
+    "styleguide": "npx styleguidist server"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2",
+    "react-helmet": "^5.2.0",
+    "react-icons": "^3.2.2",
+    "react-redux": "latest",
+    "react-router-dom": "latest",
+    "redux": "latest"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.4",
+    "babel-preset-env": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.0",
+    "node-sass": "latest",
+    "react-scripts": "latest",
+    "react-styleguidist": "^8.0.6",
+    "react-test-renderer": "latest",
+    "redux-devtools-extension": "latest",
+    "sass": "^1.15.1",
+    "sass-convert": "^0.5.2"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    },
+    "coverageReporters": [
+      "text"
+    ],
+    "snapshotSerializers": []
+  }
+}
