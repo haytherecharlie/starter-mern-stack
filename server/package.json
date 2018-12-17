@@ -1,0 +1,27 @@
+{
+  "name": "quickmern-server",
+  "version": "1.0.0",
+  "description": "Quick way to start a project",
+  "main": "index.js",
+  "author": "Charlie Hay",
+  "license": "UNLICENCED",
+  "homepage": "https://github.com/haytherecharlie/quickmern",
+  "scripts": {
+    "build": "babel -d ./build ./src -s",
+    "dev": "nodemon --exec babel-node ./src",
+    "lint": "eslint ./src",
+    "prod": "node ./build",
+    "test": "jest ./src"
+  },
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-jwt": "^5.3.1",
+    "firebase-admin": "^6.3.0",
+    "jsonwebtoken": "^8.4.0",
+    "morgan": "^1.9.1"
+  }
+}

@@ -17,9 +17,9 @@ class Redux {
     value: 'wow!'
   })
 
-  types = ({
+  types = {
     ACTION: 'ACTION'
-  })
+  }
 
   action = status => ({
     type: this.types.ACTION,
