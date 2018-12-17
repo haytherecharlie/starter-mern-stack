@@ -27,5 +27,5 @@ npm i -g yarn
 ### Install Node Modules
 
 ```
-npm run quickstart / yarn quickstart
+yarn quickstart
 ```
