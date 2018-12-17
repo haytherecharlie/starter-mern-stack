@@ -10,7 +10,6 @@ import { composeWithDevTools } from 'redux-devtools-extension'
 class Redux {
   constructor() {
     this.state = this.initialState()
-    this.types()
   }
 
   initialState = () => ({

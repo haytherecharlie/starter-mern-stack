@@ -6,9 +6,9 @@
 
 import jsonwebtoken from 'jsonwebtoken'
 import bcrypt from 'bcrypt'
-import { jsonRes, errorRes } from '../../../utils/response'
-import { getDbEntry } from '../../../utils/firestore'
-import { validateEmail, validatePassword } from '../../../utils/regex'
+import { jsonRes, errorRes } from '../../../helpers/Response/Response'
+import { getDbEntry } from '../../../helpers/Firestore/Firestore'
+import { validateEmail, validatePassword } from '../../../helpers/Regex/Regex'
 
 class UserLogin {
   POST = async (req, res) => {

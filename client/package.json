@@ -26,7 +26,24 @@
     "redux": "latest"
   },
   "devDependencies": {
-    "react-scripts": "latest"
+    "babel-preset-env": "latest",
+    "babel-preset-react": "latest",
+    "babel-preset-stage-0": "latest",
+    "enzyme": "latest",
+    "enzyme-adapter-react-16": "latest",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-react": "^7.11.0",
+    "node-sass": "latest",
+    "react-scripts": "latest",
+    "react-styleguidist": "^8.0.6",
+    "react-test-renderer": "latest",
+    "redux-devtools-extension": "latest",
+    "sass": "^1.15.1",
+    "sass-convert": "^0.5.2"
   },
   "browserslist": [
     ">0.2%",

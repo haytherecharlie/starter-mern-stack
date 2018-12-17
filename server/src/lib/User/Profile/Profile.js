@@ -3,8 +3,8 @@
  * ---------------------
  * Profile | User Profile
  ******************************************/
-import { jsonRes, errorRes } from '../../../utils/response'
-import { getDbEntry } from '../../../utils/firestore'
+import { jsonRes, errorRes } from '../../../helpers/Response/Response'
+import { getDbEntry } from '../../../helpers/Firestore/Firestore'
 
 class UserProfile {
   GET = async (req, res) => {

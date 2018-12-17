@@ -4,7 +4,7 @@
  * HealthCheck | Ensure Availablility
  ******************************************/
 
-import { statusRes } from '../../utils/response'
+import { statusRes } from '../../helpers/Response/Response'
 
 class HealthCheck {
   GET(req, res) {

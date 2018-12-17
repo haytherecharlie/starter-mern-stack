@@ -5,9 +5,9 @@
  ******************************************/
 
 import bcrypt from 'bcrypt'
-import { jsonRes, errorRes } from '../../../utils/response'
-import { getDbEntry, setDbEntry } from '../../../utils/firestore'
-import { validateEmail, validatePassword } from '../../../utils/regex'
+import { jsonRes, errorRes } from '../../../helpers/Response/Response'
+import { getDbEntry, setDbEntry } from '../../../helpers/Firestore/Firestore'
+import { validateEmail, validatePassword } from '../../../helpers/Regex/Regex'
 
 class UserEdit {
   PUT = async (req, res) => {

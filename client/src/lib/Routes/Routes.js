@@ -12,7 +12,7 @@ function Routes({ location: { pathname } }) {
 
   return (
     <Switch>
-      <Route exact path="/" component={<div>Hello</div>} />
+      <Route exact path="/" component={} />
     </Switch>
   )
 }

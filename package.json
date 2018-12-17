@@ -6,31 +6,6 @@
   "license": "UNLICENCED",
   "homepage": "https://github.com/haytherecharlie/quickmern",
   "scripts": {
-    "quickstart": "sh ./quickstart.sh"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^8.0.4",
-    "babel-preset-env": "latest",
-    "babel-preset-react": "latest",
-    "babel-preset-stage-0": "latest",
-    "enzyme": "latest",
-    "enzyme-adapter-react-16": "latest",
-    "eslint": "^5.10.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-prettier": "^3.0.0",
-    "eslint-plugin-react": "^7.11.0",
-    "jest": "^23.6.0",
-    "nodemon": "^1.18.7",
-    "node-sass": "latest",
-    "prettier": "^1.15.3",
-    "react-styleguidist": "^8.0.6",
-    "react-test-renderer": "latest",
-    "redux-devtools-extension": "latest",
-    "sass": "^1.15.1",
-    "sass-convert": "^0.5.2"
+    "quickstart": "cd ./client && yarn install && cd ../server && yarn install"
   }
 }
