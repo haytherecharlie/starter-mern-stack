@@ -1,24 +1,30 @@
-------------------------------------------------------
+---
+# Quick M.E.R.N. | Quickstart a project.
+---
 
-#Quick M.E.R.N. | Quickstart a project.
+### TABLE OF CONTENTS
 
-------------------------------------------------------
-
-###TABLE OF CONTENTS###
-
-Topic                              | Date       | Created By               |
------------------------------------|------------|--------------------------|
-[Getting Started](#Topic01)        | 17-12-2018 | Charlie Hay              |
+| Topic                       | Date       | Created By  |
+| --------------------------- | ---------- | ----------- |
+| [Getting Started](#Topic01) | 17-12-2018 | Charlie Hay |
 
 <a name="Topic01"></a>
 ##Getting Started:
 
-###Clone Repo.
+### Clone Repo.
+
 ```
 git clone https://github.com/haytherecharlie/quickmern
 ```
 
-###Install Node Modules
+### Install Yarn
+
+```
+npm i -g yarn
+```
+
+### Install Node Modules
+
 ```
 npm run quickstart / yarn quickstart
 ```
