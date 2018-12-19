@@ -5,7 +5,7 @@
  ******************************************/
 
 class Notification {
-  constructor(color) {
+  constructor() {
     this.element = document.querySelector('.notification')
     this.listening = false
   }

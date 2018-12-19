@@ -1,11 +1,6 @@
 {
-  "name": "quickmern-client",
-  "version": "1.0.0",
-  "description": "Quick way to start a project",
-  "main": "index.js",
-  "author": "Charlie Hay",
+  "name": "client",
   "license": "UNLICENCED",
-  "homepage": "https://github.com/haytherecharlie/quickmern",
   "scripts": {
     "build": "../node_modules/react-scripts/bin/react-scripts build",
     "coverage": "yarn test -- --coverage",

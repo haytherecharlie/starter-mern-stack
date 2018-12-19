@@ -1,11 +1,12 @@
 {
   "name": "quickmern",
   "version": "1.0.0",
-  "description": "Quick way to start a project",
+  "description": "Quickly develop isomorphic react sites",
+  "main": "index.js",
   "author": "Charlie Hay",
   "license": "UNLICENCED",
-  "homepage": "https://github.com/haytherecharlie/quickmern",
+  "homepage": "https://github.com/thedevenvironment/thedevenvironment.com",
   "scripts": {
-    "quickstart": "cd ./client && yarn install && cd ../server && yarn install"
+    "setup": "sh ./scripts/setup.sh"
   }
 }

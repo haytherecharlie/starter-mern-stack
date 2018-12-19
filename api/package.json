@@ -1,11 +1,6 @@
 {
-  "name": "quickmern-server",
-  "version": "1.0.0",
-  "description": "Quick way to start a project",
-  "main": "index.js",
-  "author": "Charlie Hay",
+  "name": "api",
   "license": "UNLICENCED",
-  "homepage": "https://github.com/haytherecharlie/quickmern",
   "scripts": {
     "build": "babel -d ./build ./src -s",
     "dev": "nodemon --exec babel-node ./src",
