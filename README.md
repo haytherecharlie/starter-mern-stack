@@ -1,5 +1,5 @@
 ---
-# Quick M.E.R.N. | Quickstart a project.
+# Starter MERN Stack | Mongo / Express / React / Node
 ---
 
 ### TABLE OF CONTENTS
